@@ -101,7 +101,7 @@ No arquivo `index.html`, localize a seção com classe `.video-placeholder` (lin
 #### **Configurar WhatsApp**
 No arquivo `js/main.js`, linha 194:
 ```javascript
-const whatsappNumber = '5500000000000'; // Substitua pelo seu número
+const whatsappNumber = '5571999795670'; // Substitua pelo seu número
 ```
 Formato: 55 + DDD + Número (sem espaços ou caracteres especiais)
 
