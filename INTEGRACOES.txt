@@ -1,0 +1,405 @@
+/* ============================================
+   INTEGRAÇÕES E TRACKING - TQP
+   Copie e cole no final do <head> do index.html
+   ============================================ */
+
+/* ============================================
+   1. GOOGLE ANALYTICS (GA4)
+   ============================================ */
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- INSTRUÇÕES:
+1. Crie uma conta no Google Analytics (analytics.google.com)
+2. Substitua 'G-XXXXXXXXXX' pelo seu ID de medição
+3. Cole no <head> do index.html
+-->
+
+
+/* ============================================
+   2. FACEBOOK PIXEL
+   ============================================ */
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'SEU_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- INSTRUÇÕES:
+1. Acesse Meta Business Suite (business.facebook.com)
+2. Vá em Eventos > Pixels
+3. Copie seu Pixel ID
+4. Substitua 'SEU_PIXEL_ID' acima
+5. Cole no <head> do index.html
+-->
+
+<!-- EVENTOS PERSONALIZADOS DO PIXEL (adicione no js/main.js) -->
+<script>
+// Quando alguém clicar no CTA
+document.getElementById('ctaButton').addEventListener('click', function() {
+    fbq('track', 'InitiateCheckout');
+});
+
+// Quando alguém assistir ao vídeo
+// (adicione esta função quando o vídeo for clicado)
+function trackVideoView() {
+    fbq('track', 'ViewContent', {
+        content_name: 'Video Vendas TQP',
+        content_category: 'Video'
+    });
+}
+</script>
+
+
+/* ============================================
+   3. GOOGLE TAG MANAGER
+   ============================================ */
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+
+<!-- COLE TAMBÉM NO <body> (logo após a tag de abertura): -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- INSTRUÇÕES:
+1. Crie uma conta no Google Tag Manager (tagmanager.google.com)
+2. Substitua 'GTM-XXXXXXX' pelo seu Container ID
+3. Cole a primeira parte no <head>
+4. Cole a segunda parte no início do <body>
+-->
+
+
+/* ============================================
+   4. HOTJAR (MAPAS DE CALOR)
+   ============================================ */
+
+<!-- Hotjar Tracking Code -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:XXXXXXX,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- INSTRUÇÕES:
+1. Crie uma conta no Hotjar (hotjar.com)
+2. Substitua 'XXXXXXX' pelo seu Site ID
+3. Cole no <head> do index.html
+-->
+
+
+/* ============================================
+   5. CHAT ONLINE - TAWK.TO (GRÁTIS)
+   ============================================ */
+
+<!-- Tawk.to Widget -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/SEU_PROPERTY_ID/SEU_WIDGET_ID';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!-- End Tawk.to Widget -->
+
+<!-- INSTRUÇÕES:
+1. Crie uma conta no Tawk.to (tawk.to)
+2. Copie o código de instalação completo
+3. Cole antes do </body> no index.html
+-->
+
+
+/* ============================================
+   6. BOTÃO WHATSAPP FLUTUANTE
+   ============================================ */
+
+<!-- Adicione no final do <body> do index.html -->
+<a href="https://wa.me/5511999887766?text=Olá!%20Vim%20do%20site%20e%20tenho%20interesse%20no%20TQP" 
+   class="whatsapp-float" 
+   target="_blank"
+   aria-label="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+.whatsapp-float {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
+    z-index: 998;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+}
+
+@keyframes pulse-whatsapp {
+    0%, 100% {
+        box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
+    }
+    50% {
+        box-shadow: 0 8px 35px rgba(37, 211, 102, 0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 70px;
+        right: 20px;
+    }
+}
+</style>
+
+<!-- INSTRUÇÕES:
+Substitua '5511999887766' pelo seu número de WhatsApp
+-->
+
+
+/* ============================================
+   7. CONTADOR DE TEMPO LIMITADO
+   ============================================ */
+
+<!-- Adicione na seção CTA, antes do botão -->
+<div class="countdown-timer" style="text-align: center; margin: 40px 0; padding: 30px; background: rgba(212, 175, 55, 0.1); border-radius: 15px; border: 2px solid rgba(212, 175, 55, 0.3);">
+    <p style="color: #D4AF37; font-size: 1.2rem; font-weight: 700; margin-bottom: 20px;">
+        ⏰ OFERTA ENCERRA EM:
+    </p>
+    <div id="countdown" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <div style="background: #1A1A1A; padding: 20px; border-radius: 10px; min-width: 80px;">
+            <div id="days" style="font-size: 2.5rem; font-weight: 900; color: #D4AF37; font-family: 'Playfair Display', serif;">00</div>
+            <div style="color: #B0B0B0; font-size: 0.9rem; margin-top: 5px;">DIAS</div>
+        </div>
+        <div style="background: #1A1A1A; padding: 20px; border-radius: 10px; min-width: 80px;">
+            <div id="hours" style="font-size: 2.5rem; font-weight: 900; color: #D4AF37; font-family: 'Playfair Display', serif;">00</div>
+            <div style="color: #B0B0B0; font-size: 0.9rem; margin-top: 5px;">HORAS</div>
+        </div>
+        <div style="background: #1A1A1A; padding: 20px; border-radius: 10px; min-width: 80px;">
+            <div id="minutes" style="font-size: 2.5rem; font-weight: 900; color: #D4AF37; font-family: 'Playfair Display', serif;">00</div>
+            <div style="color: #B0B0B0; font-size: 0.9rem; margin-top: 5px;">MINUTOS</div>
+        </div>
+        <div style="background: #1A1A1A; padding: 20px; border-radius: 10px; min-width: 80px;">
+            <div id="seconds" style="font-size: 2.5rem; font-weight: 900; color: #D4AF37; font-family: 'Playfair Display', serif;">00</div>
+            <div style="color: #B0B0B0; font-size: 0.9rem; margin-top: 5px;">SEGUNDOS</div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Configure a data final (ano, mês-1, dia, hora, minuto, segundo)
+const countDownDate = new Date("2026, 1, 20, 23, 59, 59").getTime();
+
+const countdown = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+    document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "<p style='color: #FF3B3B; font-size: 1.5rem; font-weight: 700;'>OFERTA ENCERRADA!</p>";
+    }
+}, 1000);
+</script>
+
+
+/* ============================================
+   8. CAPTURA DE E-MAIL (ANTES DO VÍDEO)
+   ============================================ */
+
+<!-- Adicione ANTES da seção de vídeo -->
+<section class="email-capture" style="padding: 80px 0; background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));">
+    <div class="container" style="max-width: 700px;">
+        <div style="text-align: center; background: #1A1A1A; padding: 50px 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3);">
+            <h2 style="color: #D4AF37; font-size: 2rem; margin-bottom: 15px;">
+                🎁 Assista o Vídeo Completo
+            </h2>
+            <p style="color: #B0B0B0; font-size: 1.1rem; margin-bottom: 30px;">
+                Insira seu melhor e-mail para liberar acesso ao vídeo de apresentação do Método TQP
+            </p>
+            <form id="emailForm" style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <input type="text" 
+                       id="userName" 
+                       placeholder="Seu nome" 
+                       required
+                       style="flex: 1; min-width: 200px; padding: 18px 25px; background: #2A2A2A; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50px; color: white; font-size: 1rem;">
+                <input type="email" 
+                       id="userEmail" 
+                       placeholder="seu@email.com" 
+                       required
+                       style="flex: 1; min-width: 200px; padding: 18px 25px; background: #2A2A2A; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50px; color: white; font-size: 1rem;">
+                <button type="submit" 
+                        style="padding: 18px 40px; background: linear-gradient(135deg, #B8941F, #D4AF37); color: #0A0A0A; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; text-transform: uppercase;">
+                    LIBERAR VÍDEO
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+document.getElementById('emailForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('userName').value;
+    const email = document.getElementById('userEmail').value;
+    
+    // Aqui você pode integrar com sua ferramenta de e-mail marketing
+    // Exemplo: enviar para Google Sheets, Mailchimp, etc.
+    
+    console.log('Nome:', name);
+    console.log('Email:', email);
+    
+    // Rolar para o vídeo
+    document.querySelector('.video-section').scrollIntoView({ behavior: 'smooth' });
+    
+    // Mostrar mensagem de sucesso
+    alert('✅ Acesso liberado! Role para baixo para assistir o vídeo.');
+});
+</script>
+
+
+/* ============================================
+   9. INTEGRAÇÃO COM PLANILHA GOOGLE (Leads)
+   ============================================ */
+
+<!-- INSTRUÇÕES:
+1. Crie uma planilha no Google Sheets
+2. Vá em Extensões > Apps Script
+3. Cole o código abaixo:
+-->
+
+<script>
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  
+  sheet.appendRow([
+    new Date(),
+    data.name,
+    data.email,
+    data.phone || '',
+    data.source || 'Landing Page TQP'
+  ]);
+  
+  return ContentService.createTextOutput(JSON.stringify({
+    'result': 'success'
+  })).setMimeType(ContentService.MimeType.JSON);
+}
+</script>
+
+<!-- 4. Publique como Web App
+5. Copie a URL gerada
+6. Use no formulário:
+-->
+
+<script>
+function sendToGoogleSheets(name, email, phone) {
+    const scriptURL = 'SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI';
+    
+    fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            phone: phone,
+            source: 'Landing Page TQP'
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log('Lead enviado com sucesso!'))
+    .catch(error => console.error('Erro:', error));
+}
+</script>
+
+
+/* ============================================
+   OBSERVAÇÕES IMPORTANTES
+   ============================================ */
+
+/*
+1. ORDEM DE PRIORIDADE:
+   - Google Analytics (essencial para métricas)
+   - Facebook Pixel (se for anunciar no Facebook/Instagram)
+   - WhatsApp Flutuante (facilita conversão)
+   - Hotjar (entender comportamento dos visitantes)
+
+2. PERFORMANCE:
+   - Não adicione TODAS as integrações de uma vez
+   - Priorize as mais importantes para seu negócio
+   - Monitore a velocidade de carregamento
+
+3. TESTES:
+   - Sempre teste as integrações após adicionar
+   - Use o Console do navegador (F12) para verificar erros
+   - Verifique se os eventos estão sendo disparados
+
+4. PRIVACIDADE:
+   - Considere adicionar um aviso de cookies
+   - Consulte a LGPD (Lei Geral de Proteção de Dados)
+   - Crie uma página de Política de Privacidade
+
+5. SUPORTE:
+   - Cada ferramenta tem documentação própria
+   - Consulte os sites oficiais para detalhes
+   - Mantenha os scripts atualizados
+*/

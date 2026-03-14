@@ -1,0 +1,686 @@
+/* ============================================
+   VIP PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* ============================================
+   VIP HERO SECTION
+   ============================================ */
+.vip-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 150px 0 80px;
+    background: 
+        linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(26, 26, 26, 0.9)),
+        radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.15), transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(212, 175, 55, 0.1), transparent 50%);
+    overflow: hidden;
+}
+
+.vip-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="0" y="0" width="1" height="1" fill="rgba(212,175,55,0.03)"/></svg>');
+    background-size: 2px 2px;
+    opacity: 0.5;
+}
+
+.vip-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vip-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    border-radius: 50px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.vip-badge i {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.vip-badge span {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--black);
+    letter-spacing: 2px;
+}
+
+.vip-hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 30px;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.vip-hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--gray);
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.vip-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.vip-stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 15px;
+}
+
+.vip-stat i {
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.vip-stat strong {
+    display: block;
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.vip-stat span {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.vip-hero-cta {
+    margin-top: 50px;
+}
+
+/* ============================================
+   VIP BENEFITS SECTION
+   ============================================ */
+.vip-benefits-section {
+    padding: var(--section-padding);
+    background: var(--black-light);
+}
+
+.vip-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.vip-benefit-card {
+    padding: 40px 30px;
+    background: var(--black-medium);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.vip-benefit-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.vip-benefit-card h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.vip-benefit-card p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   PLATFORM SECTION
+   ============================================ */
+.platform-section {
+    padding: var(--section-padding);
+    background: var(--black);
+}
+
+.platform-selector {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.platform-btn {
+    padding: 40px 50px;
+    background: var(--black-medium);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 250px;
+    text-align: center;
+}
+
+.platform-btn:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.platform-btn.active {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+    border-color: var(--gold);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+}
+
+.platform-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.platform-btn.active .platform-logo {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    border-color: var(--gold);
+}
+
+.platform-logo i {
+    font-size: 2.5rem;
+    color: var(--gold);
+}
+
+.platform-btn.active .platform-logo i {
+    color: var(--black);
+}
+
+.platform-btn h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.platform-btn p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.platform-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.platform-note i {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.platform-note p {
+    color: var(--gray);
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ============================================
+   VIP PLANS SECTION
+   ============================================ */
+.vip-plans-section {
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, var(--black-light), var(--black-medium));
+}
+
+.plans-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 60px auto 0;
+}
+
+.plan-card {
+    position: relative;
+    padding: 50px 40px;
+    background: var(--black-light);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.plan-card.featured {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+    border-color: var(--gold);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 25px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.plan-header h3 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.plan-platform {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50px;
+}
+
+.plan-platform i {
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+.plan-platform span {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.plan-price {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-original {
+    display: block;
+    color: var(--gray-dark);
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+}
+
+.plan-price .currency {
+    font-size: 2rem;
+    color: var(--gold);
+    font-weight: 700;
+    vertical-align: top;
+}
+
+.plan-price .value {
+    font-size: 4.5rem;
+    color: var(--gold);
+    font-weight: 900;
+    font-family: var(--font-display);
+    line-height: 1;
+}
+
+.plan-price .period {
+    font-size: 1.2rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.plan-savings {
+    text-align: center;
+    padding: 12px 20px;
+    background: rgba(0, 214, 107, 0.1);
+    border: 1px solid rgba(0, 214, 107, 0.3);
+    border-radius: 50px;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+}
+
+.plan-description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.plan-description p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.plan-features {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-features i {
+    color: var(--gold);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.btn-plan {
+    width: 100%;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-plan:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+}
+
+.btn-plan.featured {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+/* ============================================
+   VIP TESTIMONIALS SECTION
+   ============================================ */
+.vip-testimonials-section {
+    padding: var(--section-padding);
+    background: var(--black);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    padding: 40px 35px;
+    background: var(--black-medium);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.testimonial-stars {
+    margin-bottom: 20px;
+}
+
+.testimonial-stars i {
+    color: var(--gold);
+    font-size: 1rem;
+    margin-right: 3px;
+}
+
+.testimonial-text {
+    color: var(--gray);
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    flex-shrink: 0;
+}
+
+.author-avatar i {
+    color: var(--gold);
+    font-size: 1.5rem;
+}
+
+.testimonial-author strong {
+    display: block;
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.testimonial-author span {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   VIP CTA SECTION
+   ============================================ */
+.vip-cta-section {
+    padding: 100px 0;
+    background: 
+        linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05)),
+        var(--black-light);
+}
+
+.vip-cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vip-cta-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.4);
+}
+
+.vip-cta-icon i {
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.vip-cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+.vip-cta-content p {
+    font-size: 1.3rem;
+    color: var(--gray);
+    margin-bottom: 40px;
+}
+
+.vip-cta-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.vip-cta-note i {
+    color: var(--gold);
+}
+
+/* ============================================
+   RESPONSIVE - VIP PAGE
+   ============================================ */
+@media (max-width: 1024px) {
+    .vip-hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .vip-stat {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .vip-hero {
+        padding: 120px 0 60px;
+        min-height: auto;
+    }
+    
+    .platform-selector {
+        flex-direction: column;
+    }
+    
+    .platform-btn {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .plans-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .vip-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .vip-badge {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .plan-card {
+        padding: 40px 25px;
+    }
+    
+    .plan-price .value {
+        font-size: 3.5rem;
+    }
+    
+    .btn-plan {
+        font-size: 1rem;
+        padding: 18px 30px;
+    }
+}
